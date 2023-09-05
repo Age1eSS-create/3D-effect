@@ -11,11 +11,18 @@
     src: url('../fonts/merriweather-regular-italic.woff2');
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
     background-color: black;
     color: white;
     font-family: kamerik-3d;
+
 }
+
 
 :root {
     --index: calc(1vw + 1vh);
@@ -24,18 +31,23 @@ body {
 }
 
 .logo {
-    width: calc(var(--index) * 7.8);
-    height: calc(var(--index) * 7.8);
+    width: calc(var(--index) * 11.8);
+    height: calc(var(--index) * 3.8);
     background-repeat: no-repeat;
     position: absolute;
     z-index: 2;
     top: 10%;
-    left: 45%;
+    left: 41%;
 }
 
 .layers {
     perspective: 1000px;
     overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .layers__container {
@@ -119,4 +131,76 @@ body {
 .layer-5,
 .layer-6 {
     pointer-events: none;
+}
+
+.about {
+    position: relative;
+    margin-top: 110vh;
+    min-height: 100vh;
+    background-color: #ffffff;
+    z-index: 5;
+    /* overflow-x: hidden; */
+    padding-top: 90px;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    width: 114%;
+    height: 75px;
+    top: -39px;
+    left: -17px;
+    background: rgb(255 255 255);
+    /* backdrop-filter: blur(37px); */
+    z-index: 500;
+    filter: blur(10px);
+
+}
+
+.about__info {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px;
+    height: fit-content;
+}
+
+.info__item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    font-family: Lora;
+    position: relative;
+}
+
+.info__item:not(:last-child) {
+    margin-bottom: 140px;
+}
+
+.info__item h2 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #000;
+    line-height: 122%;
+    margin-bottom: 34px;
+}
+
+.info__item p {
+    font-family: Lora;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    color: #545454;
+}
+
+.right h2,
+.right p {
+    text-align: end;
+}
+
+.colTwo-absolute {
+    position: absolute;
+    top: 0;
+    right: -20vw;
 }
