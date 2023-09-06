@@ -23,6 +23,9 @@ body {
 
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
 
 :root {
     --index: calc(1vw + 1vh);
@@ -133,6 +136,9 @@ body {
     pointer-events: none;
 }
 
+/* -------------------------------------------------------ABOUT----------------------------------------------------------- */
+/* -------------------------------------------------------ABOUT----------------------------------------------------------- */
+
 .about {
     position: relative;
     margin-top: 110vh;
@@ -141,6 +147,7 @@ body {
     z-index: 5;
     /* overflow-x: hidden; */
     padding-top: 90px;
+    padding-bottom: 90px;
 }
 
 .about::before {
@@ -203,4 +210,54 @@ body {
     position: absolute;
     top: 0;
     right: -20vw;
+}
+
+/* -------------------------------------------------------JOIN----------------------------------------------------------- */
+/* -------------------------------------------------------JOIN----------------------------------------------------------- */
+
+
+.join__block {
+    width: 100%;
+    display: flex;
+    margin: 0px 0;
+    justify-content: center;
+    font-family: Lora;
+}
+
+.block__info {
+    box-sizing: border-box;
+    padding: 20px 18px 40px 18px;
+    min-width: 900px;
+    background-color: rgba(218, 255, 212, 0.85);
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.block__info h2 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 122%;
+    margin-bottom: 16px;
+}
+
+.block__info p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 180%;
+    margin-bottom: 25px;
+}
+
+.block__info button {
+    padding: 16px 32px;
+    background-color: #7DA85D;
+    color: #fff;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+
 }
